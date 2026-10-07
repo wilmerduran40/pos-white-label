@@ -1,0 +1,11 @@
+.git
+.github
+plans
+.env
+*.md
+docker-compose.yml
+.gitignore
+node_modules
+core/print-agent
+core/api/uploads
+core/print-agent/tickets

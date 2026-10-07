@@ -1,0 +1,13 @@
+{
+  "name": "kiki-print-agent",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Agente impresor para KIKI Fast Food: hace polling de la cola de pedidos e imprime en ticketera térmica de red (JetDirect, puerto 9100) o en modo simulado.",
+  "bin": {
+    "kiki-agent": "agent.js"
+  },
+  "scripts": {
+    "start": "node agent.js",
+    "mock": "node agent.js"
+  }
+}

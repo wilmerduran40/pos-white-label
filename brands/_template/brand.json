@@ -1,0 +1,13 @@
+{
+  "slug": "template",
+  "name": "Nombre de la marca",
+  "short": "Marca",
+  "tagline": "Panel de pedidos",
+  "primary": "#DC143C",
+  "contact": {
+    "whatsapp": "",
+    "address": "",
+    "instagram": "",
+    "mapsUrl": ""
+  }
+}

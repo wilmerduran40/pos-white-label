@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Juos Burger - Las mejores hamburguesas de Socopó, Barinas. Ingredientes frescos, carne jugosa y delivery rápido. Pide por WhatsApp.">
+    <meta name="theme-color" content="#BF0B1A">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Juos Burger">
+    <meta property="og:url" content="https://wilmerduran40.github.io/juos/">
+    <meta property="og:locale" content="es_VE">
+    <meta property="og:title" content="Juos Burger - Las mejores hamburguesas de Socopó">
+    <meta property="og:description" content="Ingredientes frescos, carne jugosa y delivery rápido en Socopó. Arma tu pedido y recíbelo por WhatsApp.">
+    <meta property="og:image" content="https://wilmerduran40.github.io/juos/img/portada.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Juos Burger - Las mejores hamburguesas de Socopó">
+    <meta name="twitter:description" content="Ingredientes frescos, carne jugosa y delivery rápido en Socopó. Arma tu pedido y recíbelo por WhatsApp.">
+    <meta name="twitter:image" content="https://wilmerduran40.github.io/juos/img/portada.jpg">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="apple-touch-icon" href="img/favicon.png">
+    <title>Juos Burger - Las mejores hamburguesas de Socopó</title>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "Juos Burger",
+        "image": "https://wilmerduran40.github.io/juos/img/portada.jpg",
+        "url": "https://wilmerduran40.github.io/juos/",
+        "telephone": "+58-426-1258235",
+        "servesCuisine": "Hamburguesas, Parrillas, Marisquería",
+        "priceRange": "$",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Barrio Obrero, casco central",
+            "addressLocality": "Socopó",
+            "addressRegion": "Barinas",
+            "addressCountry": "VE"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 8.231491,
+            "longitude": -70.8198939
+        },
+        "openingHoursSpecification": [{
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+            "opens": "18:00",
+            "closes": "23:30"
+        }],
+        "sameAs": [
+            "https://www.instagram.com/juosburger/",
+            "https://www.facebook.com/juosburger/",
+            "https://www.tiktok.com/@juosburger"
+        ],
+        "hasMenu": "https://wilmerduran40.github.io/juos/menu.html"
+    }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        orange: {
+                            50: '#FBF0F1',
+                            100: '#F7E0E2',
+                            200: '#F0C3C6',
+                            300: '#E49A9E',
+                            400: '#D45E64',
+                            500: '#BF0B1A',
+                            600: '#A80917',
+                            700: '#730710',
+                            800: '#5A060D',
+                            900: '#400509'
+                        },
+                        gold: {
+                            50: '#FDF8E3',
+                            100: '#FBF0C2',
+                            200: '#F7E69B',
+                            300: '#F2D335',
+                            400: '#E0BE2F',
+                            500: '#C9A92A',
+                            600: '#A69129',
+                            700: '#88701F',
+                            800: '#6A5618',
+                            900: '#4B3D11'
+                        }
+                    }
+                }
+            }
+        };
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased selection:bg-orange-500 selection:text-white">
+
+    <header class="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-sm shadow-md transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <picture class="block">
+                        <source type="image/webp" srcset="img/logo-400.webp 400w, img/logo-800.webp 800w, img/logo-1600.webp 1600w" sizes="48px">
+                        <img src="img/logo.jpeg" alt="Juos Burger" class="h-12 w-auto rounded-lg object-contain">
+                    </picture>
+                    <span class="font-extrabold text-2xl tracking-tight text-gray-900">Juos <span class="text-orange-600">Burger</span></span>
+                </div>
+
+                <!-- Menú Desktop -->
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <a href="#nosotros" class="text-gray-600 hover:text-orange-600 font-semibold transition-colors">Nosotros</a>
+                    <a href="#especialidades" class="text-gray-600 hover:text-orange-600 font-semibold transition-colors">Especialidades</a>
+                    <a href="#clientes" class="text-gray-600 hover:text-orange-600 font-semibold transition-colors">Clientes</a>
+                    <a href="#ubicacion" class="text-gray-600 hover:text-orange-600 font-semibold transition-colors">Ubicación</a>
+                    <a href="menu.html" class="bg-orange-600 text-white px-6 py-2.5 rounded-full font-bold hover:bg-orange-700 transition-transform transform hover:scale-105 shadow-lg shadow-orange-500/30 flex items-center gap-2">
+                        <i class="fa-solid fa-utensils"></i> Ver Menú Completo
+                    </a>
+                </nav>
+
+                <!-- Botón Menú Móvil -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-orange-600 focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menú Móvil Desplegable -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-4 space-y-1 sm:px-3 flex flex-col shadow-lg">
+                <a href="#nosotros" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-orange-600 hover:bg-orange-50 rounded-md">Nosotros</a>
+                <a href="#especialidades" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-orange-600 hover:bg-orange-50 rounded-md">Especialidades</a>
+                <a href="#clientes" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-orange-600 hover:bg-orange-50 rounded-md">Clientes</a>
+                <a href="#ubicacion" class="block px-3 py-3 text-base font-medium text-gray-700 hover:text-orange-600 hover:bg-orange-50 rounded-md">Ubicación</a>
+                <div class="mt-4 px-3">
+                    <a href="menu.html" class="block w-full text-center bg-orange-600 text-white px-4 py-3 rounded-xl font-bold hover:bg-orange-700 shadow-md">
+                        <i class="fa-solid fa-utensils mr-2"></i> Ordenar Ahora
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-bg min-h-[100svh] flex items-center justify-center pt-20 relative overflow-hidden">
+        <!-- Overlay decorativo -->
+        <div class="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-gray-50 to-transparent"></div>
+        <div class="container mx-auto px-4 text-center z-10">
+            <span class="block text-gold-300 font-bold tracking-widest uppercase mb-3 fade-in-up text-sm sm:text-base">El verdadero sabor de Socopó</span>
+            <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold text-white mb-6 fade-in-up delay-100 leading-tight">Hamburguesas <br class="hidden sm:block"/> <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-gold-300">Sin Competencia</span>
+            </h1>
+            <p class="text-lg sm:text-xl text-gray-200 mb-10 max-w-2xl mx-auto fade-in-up delay-200 font-light">
+                Ingredientes frescos, carne jugosa y el toque especial de la casa. Prepárate para una experiencia que te hará volver por más.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4 fade-in-up delay-300">
+                <a href="menu.html" class="bg-orange-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-orange-700 transition-all transform hover:-translate-y-1 hover:shadow-xl hover:shadow-orange-600/40 flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-cart-shopping"></i> Pide tu Delivery
+                </a>
+                <a href="#ubicacion" class="bg-white/10 backdrop-blur-md text-white border border-white/30 px-8 py-4 rounded-full font-bold text-lg hover:bg-white/20 transition-all flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-location-dot"></i> Visítanos
+                </a>
+            </div>
+            <div class="mt-6 fade-in-up delay-400">
+                <a href="/admin/login" class="inline-flex items-center gap-2 text-white/60 hover:text-white text-sm transition-colors">
+                    <i class="fa-solid fa-lock text-xs"></i> Iniciar sesión
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="nosotros" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">La Experiencia Juos</h2>
+                <div class="w-24 h-1 bg-gold-300 mx-auto rounded-full"></div>
+                <p class="mt-6 text-gray-600 max-w-2xl mx-auto text-lg">
+                    Más que comida rápida, ofrecemos calidad en cada mordisco. Nos enorgullece ser el punto de encuentro en Barrio Obrero.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Característica 1 -->
+                <div class="text-center p-6 rounded-2xl bg-gray-50 hover:bg-orange-50 transition-colors duration-300 border border-gray-100 hover:border-orange-200 group reveal">
+                    <div class="w-20 h-20 mx-auto bg-white rounded-full flex items-center justify-center shadow-md text-orange-600 text-3xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-fire-burner"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Sabor Único</h3>
+                    <p class="text-gray-600">Nuestras carnes son preparadas diariamente con una receta secreta que garantiza jugosidad y un sabor inconfundible.</p>
+                </div>
+                <!-- Característica 2 -->
+                <div class="text-center p-6 rounded-2xl bg-gray-50 hover:bg-orange-50 transition-colors duration-300 border border-gray-100 hover:border-orange-200 group reveal" style="transition-delay:120ms">
+                    <div class="w-20 h-20 mx-auto bg-white rounded-full flex items-center justify-center shadow-md text-orange-600 text-3xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Ingredientes Frescos</h3>
+                    <p class="text-gray-600">Seleccionamos los mejores vegetales y pan artesanal de la zona para que cada hamburguesa sea perfecta.</p>
+                </div>
+                <!-- Característica 3 -->
+                <div class="text-center p-6 rounded-2xl bg-gray-50 hover:bg-orange-50 transition-colors duration-300 border border-gray-100 hover:border-orange-200 group reveal" style="transition-delay:240ms">
+                    <div class="w-20 h-20 mx-auto bg-white rounded-full flex items-center justify-center shadow-md text-orange-600 text-3xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-motorcycle"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Delivery Rápido</h3>
+                    <p class="text-gray-600">¿No quieres salir? Te llevamos tu pedido calientito hasta la puerta de tu casa en Socopó.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="especialidades" class="py-20 bg-gray-900 text-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 reveal">
+                <div>
+                    <span class="text-gold-300 font-bold uppercase tracking-wider text-sm mb-2 block">Los Favoritos</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold">Nuestras Estrellas</h2>
+                </div>
+                <a href="menu.html" class="hidden md:flex items-center gap-2 text-gold-300 hover:text-gold-200 font-semibold transition-colors mt-4 md:mt-0">
+                    Ver menú completo <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Tarjeta Especialidad 1 -->
+                <a href="menu.html#h9" class="reveal">
+                    <div class="group relative rounded-2xl overflow-hidden cursor-pointer">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-10"></div>
+                        <picture class="block">
+                            <source type="image/webp" srcset="img/portada-400.webp 400w, img/portada-800.webp 800w, img/portada-1600.webp 1600w" sizes="(min-width:1024px) 33vw, (min-width:768px) 50vw, 100vw">
+                            <img src="img/portada.jpg" alt="Grosera Mayor" loading="lazy" onerror="this.onerror=null;this.src='img/placeholder.svg'" class="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-700">
+                        </picture>
+                        <div class="absolute bottom-0 left-0 w-full p-6 z-20">
+                            <div class="flex justify-between items-center mb-2">
+                                <h3 class="text-2xl font-bold text-white">Grosera Mayor</h3>
+                                <span class="bg-orange-600 text-white text-sm font-bold px-3 py-1 rounded-full">Top Ventas</span>
+                            </div>
+                            <p class="text-gray-300 text-sm mb-4 line-clamp-2">Doble proteína, chorizo, maíz, tocineta, queso amarillo y mozzarella. Peso: 800 g.</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Tarjeta Especialidad 2 -->
+                <a href="menu.html#h11" class="reveal" style="transition-delay:120ms">
+                    <div class="group relative rounded-2xl overflow-hidden cursor-pointer">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-10"></div>
+                        <picture class="block">
+                            <source type="image/webp" srcset="img/mostrosa-400.webp 400w, img/mostrosa-800.webp 800w, img/mostrosa-1600.webp 1600w" sizes="(min-width:1024px) 33vw, (min-width:768px) 50vw, 100vw">
+                            <img src="img/mostrosa.jpg" alt="La Monstruosa" loading="lazy" onerror="this.onerror=null;this.src='img/placeholder.svg'" class="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-700">
+                        </picture>
+                        <div class="absolute bottom-0 left-0 w-full p-6 z-20">
+                            <div class="flex justify-between items-center mb-2">
+                                <h3 class="text-2xl font-bold text-white">La Monstruosa</h3>
+                                <span class="bg-red-600 text-white text-sm font-bold px-3 py-1 rounded-full">¡Gigante!</span>
+                            </div>
+                            <p class="text-gray-300 text-sm mb-4 line-clamp-2">3 croquetas gratinadas con mozzarella, maíz, pollo gratinado con queso amarillo, tocineta y chorizo. Peso: 1 kg.</p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Tarjeta Especialidad 3 -->
+                <a href="menu.html#pc3" class="reveal" style="transition-delay:240ms">
+                    <div class="group relative rounded-2xl overflow-hidden cursor-pointer lg:block">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent z-10"></div>
+                        <picture class="block">
+                            <source type="image/webp" srcset="img/costillabqq-400.webp 400w, img/costillabqq-800.webp 800w, img/costillabqq-1600.webp 1600w" sizes="(min-width:1024px) 33vw, (min-width:768px) 50vw, 100vw">
+                            <img src="img/costillabqq.jpg" alt="Costillas BBQ" loading="lazy" onerror="this.onerror=null;this.src='img/placeholder.svg'" class="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-700">
+                        </picture>
+                        <div class="absolute bottom-0 left-0 w-full p-6 z-20">
+                            <div class="flex justify-between items-center mb-2">
+                                <h3 class="text-2xl font-bold text-white">Costillas BBQ</h3>
+                                <span class="bg-red-600 text-white text-sm font-bold px-3 py-1 rounded-full">BBQ</span>
+                            </div>
+                            <p class="text-gray-300 text-sm mb-4 line-clamp-2">Costillas a la barbacoa caramelizadas y jugosas, acompañadas de papas fritas y ensalada a la parmesana.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="mt-10 text-center md:hidden">
+                <a href="menu.html" class="inline-flex items-center gap-2 text-gold-300 font-semibold border-b border-gold-300 pb-1">
+                    Ver todo el menú <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="clientes" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">Nuestros Clientes Felices</h2>
+                <div class="w-24 h-1 bg-gold-300 mx-auto rounded-full"></div>
+                <p class="mt-6 text-gray-600 max-w-2xl mx-auto text-lg">
+                    Nada nos hace más felices que verlos disfrutando. Estas son algunas de las fotos de nuestros clientes probando lo mejor de Juos.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 clientes-grid">
+                <!-- =====================================================
+                     GUÍA DE EDICIÓN MANUAL DE ESTA SECCIÓN
+                     -----------------------------------------------------
+                     Cada tarjeta es un <div> de la grilla "clientes-grid".
+                     Puedes agregar/quitar tarjetas libremente; la grilla
+                     se acomoda sola (máx. 3 columnas).
+
+                     CAMBIAR UNA FOTO (tarjeta de imagen):
+                       - data-src       : imagen que abre la vista completa
+                       - <img src=".."> : miniatura de la grilla
+                       - data-caption   : texto en la vista completa
+                       - <p> del overlay: texto corto que se ve en la tarjeta
+
+                     AGREGAR UN VIDEO (tarjeta de video):
+                       Copia una tarjeta con data-type="video" y ajusta:
+                       - data-type  : "video" (NUNCA "image" en un video)
+                       - data-src   : ruta del .mp4 que abre el lightbox
+                       - data-poster: portada para la vista completa
+                       - <video poster="..."> : portada de la miniatura
+                       - <source src="...">   : MISMA ruta que el data-src
+                       - conserva el badge "Video" (botón play arriba)
+
+                     UBICACIÓN DE ARCHIVOS:
+                       - Videos:  img/clientes/videos/  (*.mp4)
+                       - Fotos:   img/clientes/         (*.jpg)
+                     ===================================================== -->
+
+                <!-- Tarjeta 1 - FOTO -->
+                <div class="reveal cursor-zoom-in" data-type="image" data-src="img/clientes/cliente1.jpg" data-caption="¡Listo para devorar!">
+                    <div class="group relative rounded-2xl overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent z-10 pointer-events-none"></div>
+                        <picture class="block">
+                            <source type="image/webp" srcset="img/clientes/cliente1-400.webp 400w, img/clientes/cliente1-800.webp 800w, img/clientes/cliente1-1600.webp 1600w" sizes="(min-width:1024px) 33vw, (min-width:640px) 50vw, 100vw">
+                            <img src="img/clientes/cliente1.jpg" alt="Cliente disfrutando una hamburguesa Juos" loading="lazy" onerror="this.onerror=null;this.src='img/placeholder.svg'" class="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-700">
+                        </picture>
+                        <div class="absolute bottom-0 left-0 w-full p-5 z-20 pointer-events-none">
+                            <p class="text-white font-semibold flex items-center gap-2"><i class="fa-solid fa-heart text-red-400"></i> ¡Listo para devorar!</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tarjeta 2 - VIDEO (cliente.mp4) -->
+                <div class="reveal cursor-zoom-in" style="transition-delay:120ms" data-type="video" data-src="img/clientes/videos/cliente.mp4" data-poster="img/clientes/cliente2.jpg" data-caption="Otro cliente 100% feliz">
+                    <div class="group relative rounded-2xl overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent z-10 pointer-events-none"></div>
+                        <video muted loop playsinline preload="none" poster="img/perrocaliente.jpg" class="video-preview w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-700">
+                            <source src="img/clientes/videos/cliente.mp4" type="video/mp4">
+                        </video>
+                        <div class="absolute bottom-0 left-0 w-full p-5 z-20 pointer-events-none">
+                            <p class="text-white font-semibold flex items-center gap-2"><i class="fa-solid fa-heart text-red-400"></i> Otro cliente 100% feliz</p>
+                        </div>
+                        <div class="absolute top-4 right-4 z-20 bg-black/60 backdrop-blur-sm text-white text-sm font-bold px-3 py-1.5 rounded-full flex items-center gap-1.5 pointer-events-none">
+                            <i class="fa-solid fa-play"></i> Video
+                        </div>
+                    </div>
+                </div>
+                <!-- Tarjeta 3 - FOTO -->
+                <div class="reveal cursor-zoom-in" style="transition-delay:240ms" data-type="image" data-src="img/clientes/cliente2.jpg" data-caption="Las mejores de Socopo">
+                    <div class="group relative rounded-2xl overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent z-10 pointer-events-none"></div>
+                        <picture class="block">
+                            <source type="image/webp" srcset="img/clientes/cliente2-400.webp 400w, img/clientes/cliente2-800.webp 800w, img/clientes/cliente2-1600.webp 1600w" sizes="(min-width:1024px) 33vw, (min-width:640px) 50vw, 100vw">
+                            <img src="img/clientes/cliente2.jpg" alt="Cliente probando pollo a la parrilla" loading="lazy" onerror="this.onerror=null;this.src='img/placeholder.svg'" class="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-700">
+                        </picture>
+                        <div class="absolute bottom-0 left-0 w-full p-5 z-20 pointer-events-none">
+                            <p class="text-white font-semibold flex items-center gap-2"><i class="fa-solid fa-heart text-red-400"></i> Las mejores de Socopo</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tarjeta 4 - VIDEO (cliente2.mp4) -->
+                <div class="reveal cursor-zoom-in" data-type="video" data-src="img/clientes/videos/cliente2.mp4" data-poster="img/clientes/videos/cliente2.jpg" data-caption="Otro cliente 100% feliz">
+                    <div class="group relative rounded-2xl overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent z-10 pointer-events-none"></div>
+                        <video muted loop playsinline preload="none" poster="img/clientes/videos/cliente2.jpg" class="video-preview w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-700">
+                            <source src="img/clientes/videos/cliente2.mp4" type="video/mp4">
+                        </video>
+                        <div class="absolute bottom-0 left-0 w-full p-5 z-20 pointer-events-none">
+                            <p class="text-white font-semibold flex items-center gap-2"><i class="fa-solid fa-heart text-red-400"></i> Otro cliente 100% feliz</p>
+                        </div>
+                        <div class="absolute top-4 right-4 z-20 bg-black/60 backdrop-blur-sm text-white text-sm font-bold px-3 py-1.5 rounded-full flex items-center gap-1.5 pointer-events-none">
+                            <i class="fa-solid fa-play"></i> Video
+                        </div>
+                    </div>
+                </div>
+                 <!-- Tarjeta 5- VIDEO (camaron.mp4) -->
+                <div class="reveal cursor-zoom-in" data-type="video" data-src="img/clientes/videos/camarones.mp4" data-poster="img/clientes/cliente5.jpg" data-caption="Camarones jugosos">
+                    <div class="group relative rounded-2xl overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent z-10 pointer-events-none"></div>
+                        <video muted loop playsinline preload="none" poster="img/clientes/cliente5.jpg" class="video-preview w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-700">
+                            <source src="img/clientes/videos/camarones.mp4" type="video/mp4">
+                        </video>
+                        <div class="absolute bottom-0 left-0 w-full p-5 z-20 pointer-events-none">
+                            <p class="text-white font-semibold flex items-center gap-2"><i class="fa-solid fa-heart text-red-400"></i> Camarones jugosos</p>
+                        </div>
+                        <div class="absolute top-4 right-4 z-20 bg-black/60 backdrop-blur-sm text-white text-sm font-bold px-3 py-1.5 rounded-full flex items-center gap-1.5 pointer-events-none">
+                            <i class="fa-solid fa-play"></i> Video
+                        </div>
+                    </div>
+                </div>
+                <!-- Tarjeta 6 - FOTO -->
+                <div class="reveal cursor-zoom-in" style="transition-delay:240ms" data-type="image" data-src="img/clientes/cliente6.jpg" data-caption="Costillas BBQ">
+                    <div class="group relative rounded-2xl overflow-hidden">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent z-10 pointer-events-none"></div>
+                        <picture class="block">
+                            <source type="image/webp" srcset="img/clientes/cliente6-400.webp 400w, img/clientes/cliente6-800.webp 800w, img/clientes/cliente6-1600.webp 1600w" sizes="(min-width:1024px) 33vw, (min-width:640px) 50vw, 100vw">
+                            <img src="img/clientes/cliente6.jpg" alt="Cliente disfrutando costillas BBQ" loading="lazy" onerror="this.onerror=null;this.src='img/placeholder.svg'" class="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-700">
+                        </picture>
+                        <div class="absolute bottom-0 left-0 w-full p-5 z-20 pointer-events-none">
+                            <p class="text-white font-semibold flex items-center gap-2"><i class="fa-solid fa-heart text-red-400"></i> Costillas BBQ</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-center mt-10 text-gray-500 text-sm reveal">
+                <i class="fa-solid fa-camera mr-2 text-orange-600"></i>¿Quieres aparecer aquí? Toma una foto disfrutando tus Juos favoritas y etiquétanos.
+            </p>
+        </div>
+    </section>
+
+    <section class="bg-orange-600 py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-5xl font-extrabold text-white mb-6">¿Se te hizo agua la boca?</h2>
+            <p class="text-orange-100 text-lg mb-8 max-w-2xl mx-auto">Arma tu pedido ahora mismo. Elige tus ingredientes, agrega adicionales y te lo enviamos directo por WhatsApp.</p>
+            <a href="menu.html" class="inline-block bg-white text-orange-600 font-extrabold text-lg px-10 py-4 rounded-full shadow-xl hover:bg-gray-100 hover:shadow-2xl transition-all transform hover:-translate-y-1">
+                <i class="fa-solid fa-mobile-screen-button mr-2"></i> Ordenar Ahora
+            </a>
+        </div>
+    </section>
+
+    <section id="ubicacion" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden flex flex-col lg:flex-row">
+                
+                <!-- Info de contacto -->
+                <div class="p-8 lg:p-12 lg:w-1/2 flex flex-col justify-center">
+                    <div class="mb-2 inline-block">
+                        <span class="bg-orange-100 text-orange-600 font-bold px-4 py-1 rounded-full text-sm">Encuéntranos</span>
+                    </div>
+                    <h2 class="text-3xl font-extrabold text-gray-900 mb-6">Visita nuestro local</h2>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-orange-50 p-3 rounded-full text-orange-600 mt-1">
+                                <i class="fa-solid fa-location-dot text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-lg">Dirección</h4>
+                                <p class="text-gray-600">Barrio Obrero, casco central.<br>Socopó, Barinas, Venezuela.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="bg-orange-50 p-3 rounded-full text-orange-600 mt-1">
+                                <i class="fa-solid fa-clock text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-lg">Horario de Atención</h4>
+                                <p class="text-gray-600">Lunes a Domingo<br>4:00 PM - 12:00 AM<br><span class="text-sm text-orange-600">Cerrado los miércoles</span></p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="bg-orange-50 p-3 rounded-full text-green-600 mt-1">
+                                <i class="fa-brands fa-whatsapp text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-lg">Contacto / Delivery</h4>
+                                <p class="text-gray-600"><a href="tel:+584261258235" class="hover:text-orange-600 transition-colors">+58 426-1258235</a></p>
+                                <div class="flex flex-wrap gap-x-5 gap-y-1 mt-1">
+                                    <a href="https://wa.me/584261258235" target="_blank" rel="noopener" class="text-green-600 font-semibold hover:underline text-sm inline-block">Escribir por WhatsApp</a>
+                                    <a href="https://www.google.com/maps/dir/?api=1&destination=8.231491,-70.8198939" target="_blank" rel="noopener" class="text-orange-600 font-semibold hover:underline text-sm inline-block">
+                                        <i class="fa-solid fa-diamond-turn-right mr-1"></i>Cómo llegar
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mapa de Google -->
+                <div class="lg:w-1/2 h-80 lg:h-auto relative bg-gray-200">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1974.3569865169281!2d-70.8198939!3d8.231491!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e64e9d5c55a9d5d%3A0x5f94df1a942a149!2sJuos!5e0!3m2!1ses!2sve!4v1789781096523!5m2!1ses!2sve" class="w-full h-full border-0" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Ubicación de Juos Burger"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8 text-center md:text-left">
+                
+                <div>
+                    <div class="flex items-center justify-center md:justify-start gap-2 mb-4 text-white">
+                        <picture class="block">
+                            <source type="image/webp" srcset="img/logo-400.webp 400w, img/logo-800.webp 800w, img/logo-1600.webp 1600w" sizes="40px">
+                            <img src="img/logo.jpeg" alt="Juos Burger" class="h-10 w-auto rounded-lg object-contain">
+                        </picture>
+                        <span class="font-extrabold text-2xl tracking-tight">Juos Burger</span>
+                    </div>
+                    <p class="text-sm mb-4">Las mejores hamburguesas de Socopó, preparadas con ingredientes frescos y mucho sabor.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Enlaces Rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-gold-300 transition-colors">Inicio</a></li>
+                        <li><a href="#nosotros" class="hover:text-gold-300 transition-colors">Nosotros</a></li>
+                        <li><a href="menu.html" class="hover:text-gold-300 transition-colors">Menú de Pedidos</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Síguenos</h4>
+                    <div class="flex justify-center md:justify-start gap-4">
+                        <a href="https://www.instagram.com/juosburger/" target="_blank" rel="noopener" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-white hover:bg-gradient-to-tr hover:from-yellow-400 hover:via-red-500 hover:to-purple-500 transition-all transform hover:scale-110">
+                            <i class="fa-brands fa-instagram text-xl"></i>
+                        </a>
+                        <a href="https://wa.me/584261258235" target="_blank" rel="noopener" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-white hover:bg-green-500 transition-all transform hover:scale-110">
+                            <i class="fa-brands fa-whatsapp text-xl"></i>
+                        </a>
+                        <a href="https://www.facebook.com/juosburger/" target="_blank" rel="noopener" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-white hover:bg-blue-500 transition-all transform hover:scale-110">
+                            <i class="fa-brands fa-facebook text-xl"></i>
+                        </a><a href="https://www.tiktok.com/@juosburger" target="_blank" rel="noopener" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-white hover:bg-black transition-all transform hover:scale-110">
+                            <i class="fa-brands fa-tiktok text-xl"></i>
+                            
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm">
+                <p>&copy; <span id="current-year">2026</span> Juos Burger. Todos los derechos reservados.</p>
+                <p class="mt-2 md:mt-0">Socopó, Barinas - Venezuela.</p>
+                <p> desarrollado por <a href="https://www.asisnexo.com/#contacto" target="_blank" rel="noopener" class="text-blue-500 hover:underline">Asisnexo</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox: imagen/video completo -->
+    <div id="lightbox" class="fixed inset-0 z-[100] bg-black/90 hidden items-center justify-center p-4" role="dialog" aria-modal="true" aria-label="Vista completa de foto o video">
+        <button id="lightbox-close" class="absolute top-4 right-4 text-white text-xl w-12 h-12 rounded-full bg-white/10 hover:bg-white/25 flex items-center justify-center transition-colors" aria-label="Cerrar">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <figure class="max-w-5xl w-full">
+            <div id="lightbox-media" class="flex items-center justify-center"></div>
+            <figcaption id="lightbox-caption" class="text-center text-white mt-4 text-lg font-semibold"></figcaption>
+        </figure>
+    </div>
+
+    <script>
+        // Lógica del menú móvil
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const icon = mobileMenuBtn.querySelector('i');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            }
+        });
+
+        // Cerrar menú móvil al hacer click en un enlace
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            });
+        });
+
+        // Efecto visual en el Navbar al hacer scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add('shadow-lg');
+                navbar.classList.replace('bg-white/95', 'bg-white');
+            } else {
+                navbar.classList.remove('shadow-lg');
+                navbar.classList.replace('bg-white', 'bg-white/95');
+            }
+        });
+
+        // Año dinámico en el footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Scroll reveal: aparecer secciones al entrar en viewport
+        const revealEls = document.querySelectorAll('.reveal');
+        if ('IntersectionObserver' in window) {
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('reveal-visible');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15 });
+            revealEls.forEach(el => revealObserver.observe(el));
+        } else {
+            revealEls.forEach(el => el.classList.add('reveal-visible'));
+        }
+
+        // Lightbox: ver foto o video completo
+        const lightbox = document.getElementById('lightbox');
+        const lightboxMedia = document.getElementById('lightbox-media');
+        const lightboxCaption = document.getElementById('lightbox-caption');
+        const lightboxClose = document.getElementById('lightbox-close');
+
+        // Escalera WebP generada por juos-api/scripts/optimize-images.js.
+        const WEBP_WIDTHS = [400, 800, 1600];
+        const webpSrcset = (img) => {
+            const m = img && String(img).match(/^(.*)\.(jpe?g|png|webp)$/i);
+            return m ? WEBP_WIDTHS.map(w => `${m[1]}-${w}.webp ${w}w`).join(', ') : '';
+        };
+
+        const openLightbox = (type, src, caption, poster) => {
+            lightboxMedia.innerHTML = '';
+            if (type === 'video') {
+                const video = document.createElement('video');
+                video.src = src;
+                video.poster = poster;
+                video.controls = true;
+                video.playsInline = true;
+                video.className = 'w-full max-h-[80vh] rounded-xl bg-black';
+                lightboxMedia.appendChild(video);
+                video.play().catch(() => {});
+            } else {
+                const img = document.createElement('img');
+                img.src = src;
+                img.srcset = webpSrcset(src);
+                img.sizes = '90vw';
+                img.alt = caption || 'Foto de clientes Juos';
+                img.className = 'w-full max-h-[80vh] rounded-xl object-contain';
+                lightboxMedia.appendChild(img);
+            }
+            lightboxCaption.textContent = caption || '';
+            lightbox.classList.remove('hidden');
+            lightbox.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        };
+
+        const closeLightbox = () => {
+            lightbox.classList.add('hidden');
+            lightbox.classList.remove('flex');
+            lightboxMedia.innerHTML = '';
+            document.body.style.overflow = '';
+        };
+
+        document.querySelectorAll('.clientes-grid > div[data-src]').forEach(card => {
+            card.addEventListener('click', () => {
+                openLightbox(card.dataset.type, card.dataset.src, card.dataset.caption, card.dataset.poster);
+            });
+
+            if (card.dataset.type === 'video') {
+                const video = card.querySelector('.video-preview');
+                if (video) {
+                    card.addEventListener('mouseenter', () => {
+                        if (video.paused) video.play().catch(() => {});
+                    });
+                    card.addEventListener('mouseleave', () => {
+                        video.pause();
+                        video.currentTime = 0;
+                    });
+                }
+            }
+        });
+
+        lightboxClose.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) closeLightbox();
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !lightbox.classList.contains('hidden')) closeLightbox();
+        });
+    </script>
+</body>
+</html>

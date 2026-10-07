@@ -1,0 +1,14 @@
+{
+  "slug": "asisnexo",
+  "name": "AsisNexo",
+  "short": "AsisNexo",
+  "tagline": "Panel de pedidos",
+  "primary": "#DC143C",
+  "contact": {
+    "whatsapp": "",
+    "address": "",
+    "instagram": "",
+    "mapsUrl": ""
+  },
+  "notes": "Marca migrada desde el repo restaurante_asisnexo. Comparte el menú base del core; ajustar seed.sql si se quiere menú propio."
+}

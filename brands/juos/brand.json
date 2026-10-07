@@ -1,0 +1,14 @@
+{
+  "slug": "juos",
+  "name": "Juos Burger",
+  "short": "Juos",
+  "tagline": "Panel de pedidos",
+  "primary": "#BF0B1A",
+  "contact": {
+    "whatsapp": "",
+    "address": "",
+    "instagram": "",
+    "mapsUrl": ""
+  },
+  "notes": "Marca migrada desde el repo juos. Aportó el plano de mesas/áreas/objetos que ya vive en el core compartido."
+}

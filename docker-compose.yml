@@ -1,0 +1,98 @@
+# ================================================================
+# Plataforma white-label: un solo core (API + panel admin) para todas las marcas.
+#
+# Cada local en Dokploy = una app Compose de este mismo repo con BRAND=<marca>
+# y sus secretos. El core se comparte; solo cambian los assets y la semilla
+# de la marca escogida (brands/<BRAND>/).
+#
+#   BRAND        = slug de la marca (kiki | asisnexo | juos | ...)
+#   BRAND_NAME   = nombre visible en el panel
+#   BRAND_PRIMARY= color de acento (hex) del login/botones
+# ================================================================
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+    volumes:
+      - pos-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+
+  api:
+    build:
+      context: .
+      dockerfile: core/api/Dockerfile
+      args:
+        BRAND: ${BRAND}
+    restart: unless-stopped
+    environment:
+      PORT: 3000
+      DATABASE_URL: postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD}
+      ORDER_TOKEN: ${ORDER_TOKEN}
+      AGENT_TOKEN: ${AGENT_TOKEN}
+      SESSION_SECRET: ${SESSION_SECRET}
+      APP_TZ: ${APP_TZ:-America/Caracas}
+      COOKIE_SECURE: ${COOKIE_SECURE:-false}
+      # Marca (runtime: nombre/colores se cambian sin rebuild)
+      BRAND_SLUG: ${BRAND}
+      BRAND_NAME: ${BRAND_NAME:-}
+      BRAND_SHORT: ${BRAND_SHORT:-}
+      BRAND_TAGLINE: ${BRAND_TAGLINE:-}
+      BRAND_PRIMARY: ${BRAND_PRIMARY:-#DC143C}
+      BRAND_WHATSAPP: ${BRAND_WHATSAPP:-}
+      BRAND_ADDRESS: ${BRAND_ADDRESS:-}
+      BRAND_INSTAGRAM: ${BRAND_INSTAGRAM:-}
+      BRAND_MAPS_URL: ${BRAND_MAPS_URL:-}
+    volumes:
+      - pos-uploads:/app/uploads
+    depends_on:
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3000/healthz').then(r=>{if(!r.ok)process.exit(1)}).catch(()=>process.exit(1))"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+  # Sitio estático + proxy de /api y /admin hacia el core.
+  # Sin puertos en el host: lo expone Dokploy vía dominio (pestaña Domains).
+  web:
+    build:
+      context: .
+      dockerfile: core/web/Dockerfile
+      args:
+        BRAND: ${BRAND}
+    restart: unless-stopped
+    expose:
+      - "80"
+    volumes:
+      - pos-uploads:/usr/share/nginx/html/img/uploaded
+    depends_on:
+      - api
+    networks:
+      - default
+      - dokploy-network
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q -O /dev/null http://127.0.0.1/ || exit 1"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 5s
+
+volumes:
+  pos-data:
+  pos-uploads:
+
+networks:
+  dokploy-network:
+    external: true

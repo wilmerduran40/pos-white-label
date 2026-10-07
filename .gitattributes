@@ -1,0 +1,15 @@
+# Normalización de saltos de línea y binarios.
+*.sh text eol=lf
+*.sql text eol=lf
+*.js text eol=crlf
+*.html text eol=crlf
+*.css text eol=crlf
+*.json text eol=crlf
+
+# Binarios (no normalizar)
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.ico binary
+*.svg text

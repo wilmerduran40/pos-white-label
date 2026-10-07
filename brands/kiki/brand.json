@@ -1,0 +1,14 @@
+{
+  "slug": "kiki",
+  "name": "KIKI Fast Food",
+  "short": "KIKI",
+  "tagline": "Panel de pedidos",
+  "primary": "#DC143C",
+  "contact": {
+    "whatsapp": "",
+    "address": "",
+    "instagram": "",
+    "mapsUrl": ""
+  },
+  "notes": "Marca original (antes repo kiki-fast-food). Los valores del panel se toman de variables de entorno en Dokploy; este archivo es de referencia/plantilla del despliegue."
+}
